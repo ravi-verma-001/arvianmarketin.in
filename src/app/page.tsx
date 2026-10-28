@@ -22,46 +22,46 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    title: "Meta Ads Management",
+    title: "Meta Ads (Facebook & Instagram)",
     slug: "meta-ads-and-google-ads",
-    description: "Reach relevant audiences through strategic Facebook and Instagram advertising, creative testing, campaign optimization, and performance-focused planning.",
+    description: "Stop wasting money boosting random posts. We craft scroll-stopping ad creatives, test audience hooks, and deliver profitable customer inquiries directly to your WhatsApp or phone.",
     iconName: "Target",
-    categoryTag: "01 / PAID MEDIA",
+    categoryTag: "High-ROAS Paid Growth",
   },
   {
-    title: "Website Design & Development",
+    title: "Custom Website Design",
     slug: "website-designing",
-    description: "Build a professional online presence with modern, responsive websites designed around your business, your customers, and your commercial goals.",
+    description: "Bespoke websites built on Next.js that load in under 1 second. Engineered for modern aesthetics, smooth mobile responsiveness, and turning casual visitors into eager buyers.",
     iconName: "MonitorSmartphone",
-    categoryTag: "02 / PLATFORM ARCHITECTURE",
+    categoryTag: "High-Speed Web Craft",
   },
   {
-    title: "Landing Page Design",
+    title: "High-Converting Landing Pages",
     slug: "website-designing",
-    description: "Present your offer clearly through focused landing pages designed to encourage enquiries, registrations, or sales without cognitive clutter.",
+    description: "Sending paid traffic to your homepage loses 80% of sales. We build dedicated single-offer landing pages designed specifically around getting calls, appointments, and form leads.",
     iconName: "Share2",
-    categoryTag: "03 / CONVERSION DESIGN",
+    categoryTag: "Direct Response Funnels",
   },
   {
-    title: "SEO Services",
+    title: "Local SEO & Google Business",
     slug: "website-optimization",
-    description: "Improve your website's search visibility through structured content, on-page optimization, technical foundations, and practical SEO improvements.",
+    description: "Rank in Google's Top 3 map pack and local search results when customers in Noida and Delhi NCR search for your services. Real, sustainable organic buyer inquiries.",
     iconName: "Search",
-    categoryTag: "04 / ORGANIC VISIBILITY",
+    categoryTag: "Organic Inquiries",
   },
   {
-    title: "Social Media Management",
+    title: "Social Media & Content Systems",
     slug: "social-media-management",
-    description: "Build a strong community, increase followers, and drive engagement across all your social platform channels.",
+    description: "Build genuine brand authority without cheesy Canva templates. We create consistent, high-retention reels, carousel posts, and engaging content that makes your brand stand out.",
     iconName: "Megaphone",
-    categoryTag: "05 / COMMUNITY & REACH",
+    categoryTag: "Brand Authority & Reach",
   },
   {
-    title: "Strategy & Consultation",
+    title: "1-on-1 Growth Consultation",
     slug: "content-strategy-and-creation",
-    description: "Get personalized digital roadmaps and expert guidance to navigate and conquer your overall market landscape.",
+    description: "Not sure where your funnel is leaking? Sit down with our strategists to review your current website, pricing, ads, and conversion bottleneck. Actionable roadmap, zero fluff.",
     iconName: "Lightbulb",
-    categoryTag: "06 / STRATEGIC ADVISORY",
+    categoryTag: "Founder Strategy Session",
   },
 ];
 
@@ -81,14 +81,14 @@ export default function Home() {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#dbe1ff] text-[#001539] text-xs uppercase tracking-wider mb-4 font-bold">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0051d5]"></span>
-                WHAT WE DO
+                CORE SERVICES
               </div>
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-extrabold tracking-tight text-[#0f131a] leading-tight">
-                Digital Solutions for Your Next Stage of Growth.
+                Everything You Need to Get Customers Online.
               </h2>
             </div>
             <p className="font-sans text-base text-[#546a92] max-w-md">
-              From building your digital foundation to reaching the right audience, we help bring your business goals into focus across Delhi NCR.
+              From building high-speed website infrastructure to running targeted Meta ad campaigns that put cash in your bank.
             </p>
           </div>
 
@@ -100,10 +100,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Service Spotlight: The Integrated System */}
+      {/* Featured Service Spotlight: The 3-Step Acquisition Formula */}
       <IntegratedSystemSection />
 
-      {/* Why Choose Us */}
+      {/* Why Choose Us: Honest Comparison */}
       <WhyChooseUs />
 
       {/* Process Section */}
@@ -112,13 +112,13 @@ export default function Home() {
       {/* Portfolio / Selected Work */}
       <PortfolioSection />
 
-      {/* Industries We Lead */}
+      {/* Industries We Serve */}
       <IndustriesSection />
 
-      {/* Testimonials & Partnership Standard */}
+      {/* Client Reviews */}
       <Testimonials />
 
-      {/* About Us */}
+      {/* About Us Story */}
       <AboutSection />
 
       {/* FAQ Accordion */}

@@ -1,36 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MessageCircle } from "lucide-react";
 
 const faqs = [
     {
-        q: "What services does Arvian Marketing provide?",
-        a: "We focus on core performance pillars: strategic Meta Ads (Facebook & Instagram campaigns), custom website design and development, dedicated conversion-focused landing pages, and foundational technical & on-page SEO services. We can deliver these individually or as an integrated system.",
+        q: "How soon can I expect to see real inquiries or sales from Meta Ads?",
+        a: "Unlike SEO which takes months, Meta ads start driving targeted traffic immediately. In the first 3 to 5 days, our testing phase identifies which ad hooks and audiences perform best. In most campaigns, qualified inquiries start coming into your WhatsApp or CRM within the very first week.",
     },
     {
-        q: "Can you build a website for my business?",
-        a: "Yes. We design and build professional, responsive, and easy-to-manage websites tailored to your brand identity, products, and services. Our sites are engineered with semantic clean code, fast load speeds, and intuitive layouts that support user trust.",
+        q: "Do you design the ad graphics, videos, and write the copy, or do I have to provide them?",
+        a: "We handle everything end-to-end. We write high-converting copy, design eye-catching visuals, edit short-form reels, and craft strong calls-to-action. If you already have product images or raw smartphone video clips, we polish and optimize them into scroll-stopping ads.",
     },
     {
-        q: "Do you create landing pages for advertising campaigns?",
-        a: "Absolutely. In fact, we strongly recommend dedicated landing pages for paid traffic. Sending paid ads to a cluttered homepage often results in wasted ad spend. Our landing pages are designed specifically around single offers to maximize your conversion rate.",
+        q: "Why should I get a custom Next.js website instead of a cheap WordPress site?",
+        a: "Over 80% of your customers browse on mobile phones. Most WordPress sites take 4 to 8 seconds to load, causing more than half your visitors to bounce before seeing your offer. Our custom websites load in under 1 second, look razor-sharp on all screen sizes, and turn visitors into real leads.",
     },
     {
-        q: "How does your Meta Ads management service work?",
-        a: "We handle strategic campaign planning, creative framing, copywriting, audience targeting, tracking setup, and ongoing performance testing. We continually review ad variations and performance data to optimize cost per acquisition and budget efficiency.",
+        q: "Do I have to sign a long-term lock-in contract?",
+        a: "Never. We work with clear milestone deliverables for website development, and month-to-month flexibility for ads and marketing. You stay with us because your campaigns are profitable and your pipeline is growing, not because of fine print.",
     },
     {
-        q: "How much do your services cost?",
-        a: "Our pricing is project-dependent and based on your specific requirements, timeline, and scope. After an introductory discussion to review what you need, we provide a transparent, itemized proposal with clear deliverables and no surprise costs.",
+        q: "How do I know my ad spend isn't being wasted?",
+        a: "100% transparency. You retain full ownership and direct access to your Meta Ad account. You receive weekly plain-English updates on WhatsApp showing exactly what was spent, how many leads were generated, and your exact cost per customer.",
     },
     {
-        q: "What information do you need before starting a project?",
-        a: "We start with your business goals, target customer profiles, existing branding assets, and any past marketing data. If you don't have everything formalized, our initial Discovery stage is designed to help structure these points together.",
-    },
-    {
-        q: "How can I discuss my requirements with your team?",
-        a: "You can fill out the project consultation form below, or reach us directly via WhatsApp. We will review your notes and set up a focused consultation to discuss your objectives.",
+        q: "Can we meet in person in Noida or Delhi NCR before starting?",
+        a: "Yes, definitely! We are based right here in Noida and frequently meet founders and business teams across Delhi, Noida, and Gurgaon. You can also start with a quick 15-minute WhatsApp call to discuss your goals.",
     },
 ];
 
@@ -42,23 +38,23 @@ export function FaqSection() {
             <div className="max-w-[800px] mx-auto">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#dbe1ff] text-[#001539] text-xs uppercase tracking-wider mb-4 font-bold">
-                        FREQUENTLY ASKED
+                        CLEAR ANSWERS
                     </div>
                     <h2 className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f131a] mb-4">
-                        Questions Before Getting Started?
+                        Honest Answers to Common Questions.
                     </h2>
                     <p className="font-sans text-base text-[#546a92]">
-                        Straightforward answers to the common questions we receive from founders and marketing teams.
+                        No hidden surprises. Here is how we manage expectations, budgets, and deliverables.
                     </p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 mb-12">
                     {faqs.map((faq, idx) => {
                         const isOpen = openIndex === idx;
                         return (
                             <div
                                 key={idx}
-                                className="bg-[#f8f9ff] border border-[#E5EAF2] rounded-xl p-6 transition-all duration-200"
+                                className="bg-[#f8f9ff] border border-[#E5EAF2] rounded-2xl p-6 transition-all duration-200 hover:border-[#0051d5]/40"
                             >
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : idx)}
@@ -79,6 +75,23 @@ export function FaqSection() {
                             </div>
                         );
                     })}
+                </div>
+
+                {/* Have another question CTA */}
+                <div className="text-center p-6 bg-[#f8f9ff] rounded-2xl border border-[#E5EAF2] flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="text-left">
+                        <div className="font-heading font-bold text-sm text-[#001539]">Have a specific question not answered here?</div>
+                        <div className="text-xs text-[#546a92]">We're available to answer anything directly on WhatsApp.</div>
+                    </div>
+                    <a
+                        href="https://wa.me/918920442422"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#102a56] hover:bg-[#001539] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+                    >
+                        <MessageCircle className="w-4 h-4 text-emerald-400" />
+                        <span>Ask on WhatsApp</span>
+                    </a>
                 </div>
             </div>
         </section>
