@@ -98,7 +98,7 @@ export function IntegratedSystemSection() {
                             Want an honest second opinion on your current website or ads?
                         </p>
                         <a
-                            href="https://wa.me/918920442422"
+                            href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20can%20you%20review%20my%20current%20website%20and%20ads%3F"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#001539] font-bold rounded-xl text-sm hover:bg-[#dbe1ff] shadow-md transition-all"

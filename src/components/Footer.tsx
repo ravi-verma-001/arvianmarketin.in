@@ -19,7 +19,7 @@ export function Footer() {
                             </span>
                         </div>
                         <p className="text-sm text-[#b0c6fc] max-w-md leading-relaxed mb-6">
-                            Delhi NCR &amp; Noida's strategic agency for performance Meta Ads, bespoke website design, conversion-focused landing pages, and search optimization.
+                            Delhi NCR &amp; Noida&apos;s strategic agency for performance Meta Ads, bespoke website design, conversion-focused landing pages, and search optimization.
                         </p>
                         <div className="flex items-center gap-4">
                             <a
@@ -50,13 +50,13 @@ export function Footer() {
                                 <Linkedin size={18} />
                             </a>
                             <a
-                                href="https://wa.me/918920442422"
+                                href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20I%20saw%20your%20Meta%20Ads%20service%20offer%20and%20want%20to%20get%20more%20qualified%20leads%20for%20my%20business."
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-[#dbe1ff] hover:bg-[#0051d5] hover:text-white transition-all"
+                                className="w-9 h-9 rounded-lg bg-[#25D366] flex items-center justify-center text-white hover:bg-[#20ba59] transition-all shadow-sm"
                                 aria-label="WhatsApp"
                             >
-                                <MessageCircle size={18} />
+                                <MessageCircle size={18} className="fill-white" />
                             </a>
                         </div>
                     </div>
@@ -74,10 +74,13 @@ export function Footer() {
                                 <a href="#work" className="hover:text-white transition-colors">Case Studies</a>
                             </li>
                             <li>
-                                <a href="#process" className="hover:text-white transition-colors">Our Process</a>
+                                <a href="#pricing" className="hover:text-white transition-colors">Pricing Packages</a>
                             </li>
                             <li>
-                                <a href="#about-us" className="hover:text-white transition-colors">About Agency</a>
+                                <a href="#why-us" className="hover:text-white transition-colors">Why Choose Us</a>
+                            </li>
+                            <li>
+                                <a href="#reviews" className="hover:text-white transition-colors">Client Reviews</a>
                             </li>
                             <li>
                                 <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
@@ -91,18 +94,27 @@ export function Footer() {
                     {/* Contact details */}
                     <div className="md:col-span-3">
                         <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-white mb-4">
-                            Contact
+                            Contact &amp; Support
                         </h4>
                         <div className="space-y-2.5 text-sm text-[#b0c6fc]">
                             <div>Noida &amp; Delhi NCR, India</div>
-                            <div>+91 89204 42422</div>
+                            <div>
+                                <a
+                                    href="https://wa.me/919711190678"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-white font-semibold transition-colors"
+                                >
+                                    +91 97111 90678 (WhatsApp / Call)
+                                </a>
+                            </div>
                             <div>contact@arvianmarketing.com</div>
                             <div className="pt-2">
                                 <a
                                     href="#contact"
                                     className="inline-block text-xs font-bold text-[#b0c6fc] underline hover:text-white transition-colors"
                                 >
-                                    Start a Project Request &rarr;
+                                    Get My Free Growth Plan &rarr;
                                 </a>
                             </div>
                         </div>
@@ -112,12 +124,12 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#b0c6fc]">
                     <p>
-                        © {new Date().getFullYear()} Arvian Marketing. Strategy-led solutions. Thoughtful design. Clear communication.
+                        © {new Date().getFullYear()} Arvian Marketing • Conversion-Focused Meta Ads &amp; Fast Funnels.
                     </p>
                     <div className="flex items-center gap-6">
                         <a href="#services" className="hover:text-white transition-colors">Services</a>
-                        <a href="#work" className="hover:text-white transition-colors">Work</a>
-                        <a href="#about-us" className="hover:text-white transition-colors">About</a>
+                        <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+                        <a href="#work" className="hover:text-white transition-colors">Results</a>
                         <a href="#contact" className="hover:text-white transition-colors">Contact</a>
                     </div>
                 </div>

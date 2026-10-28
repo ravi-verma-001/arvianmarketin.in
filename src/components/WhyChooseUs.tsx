@@ -12,10 +12,10 @@ export function WhyChooseUs() {
                         AN HONEST COMPARISON
                     </div>
                     <h2 className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f131a] mb-4">
-                        Why Clients Choose Us Over Bloated Agencies.
+                        Why Most Meta Ads &amp; Websites Waste Money — And How We Fix It.
                     </h2>
                     <p className="font-sans text-base text-[#546a92]">
-                        Most agencies sell you an expensive dream, hand off your project to an intern, and send reports full of confusing metrics. We work completely differently.
+                        Most business owners waste budget on boost buttons and broken funnels. Here is how our approach turns ad spend into profitable client acquisition.
                     </p>
                 </div>
 
@@ -25,27 +25,27 @@ export function WhyChooseUs() {
                     <div className="p-8 rounded-2xl bg-[#fafafa] border border-red-200/60 flex flex-col justify-between">
                         <div>
                             <div className="inline-flex items-center gap-2 text-xs font-bold text-red-600 uppercase tracking-wider mb-4 bg-red-50 px-3 py-1 rounded-md w-fit">
-                                The Typical Bloated Agency
+                                ✕ The Common Agency Trap
                             </div>
                             <h3 className="font-heading text-xl font-bold text-[#0f131a] mb-6">
-                                Frustrating delays, junior staff, &amp; vanity reports
+                                Boosting posts, slow pages &amp; unqualified leads
                             </h3>
                             <ul className="space-y-4 text-sm text-[#546a92]">
                                 <li className="flex items-start gap-3">
                                     <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Senior team pitches you, but interns with 3 months experience manage your ad spend.</span>
+                                    <span><strong>Boosting Random Posts:</strong> Running generic lead forms or boost buttons with zero Meta Pixel or CAPI conversion tracking.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Takes 2 weeks to change a single headline or update an ad creative.</span>
+                                    <span><strong>Slow, Confusing Websites:</strong> Sending expensive paid traffic to slow websites that take 5+ seconds to load and bounce 80% of visitors.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Celebrates "50,000 Impressions" even when your phone didn't ring once.</span>
+                                    <span><strong>Flooded with Junk Leads:</strong> Getting tire-kickers and fake numbers who never pick up the call or have zero budget.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                    <span>Demands 6-month contracts with hidden setup fees and rigid scopes.</span>
+                                    <span><strong>Bloated Retainers &amp; Silence:</strong> Traditional agencies charging ₹30k+ retainers, delegating to interns, and disappearing without daily optimization.</span>
                                 </li>
                             </ul>
                         </div>
@@ -54,62 +54,63 @@ export function WhyChooseUs() {
                     {/* The Arvian Marketing Experience */}
                     <div className="p-8 rounded-2xl bg-[#f8f9ff] border-2 border-[#0051d5] shadow-md flex flex-col justify-between relative">
                         <div className="absolute top-4 right-4 bg-[#0051d5] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Our Standard
+                            ✓ Our Approach
                         </div>
                         <div>
                             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0051d5] uppercase tracking-wider mb-4 bg-[#dbe1ff] px-3 py-1 rounded-md w-fit">
-                                Working With Arvian Marketing
+                                The Arvian Marketing System
                             </div>
                             <h3 className="font-heading text-xl font-bold text-[#001539] mb-6">
-                                Direct communication, fast execution, &amp; real customer sales
+                                Full-funnel tracking, 1-second funnels &amp; pre-qualified buyers
                             </h3>
                             <ul className="space-y-4 text-sm text-[#001539] font-medium">
                                 <li className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                                    <span>Direct WhatsApp group with the specialists actually building your site and running your ads.</span>
+                                    <span><strong>Full-Funnel Campaign Architecture:</strong> Meta Pixel, Conversion API (CAPI), and verified events configured to track real revenue.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                                    <span>Fast 48-hour turnarounds on ad creative variations and landing page improvements.</span>
+                                    <span><strong>Lightning-Fast 1-Second Landing Pages:</strong> Direct response conversion funnels or direct WhatsApp routes aligned with ad hooks.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                                    <span>Clear weekly reports: exactly how much was spent, how many calls/leads came in, and customer cost.</span>
+                                    <span><strong>Pre-Qualifying Intake Funnels:</strong> Strict ad copy filtering, high-intent audience segmentation, and structured questions to weed out time-wasters.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                                    <span>No forced lock-in contracts. You stay because your business is making money, not because of paperwork.</span>
+                                    <span><strong>Weekly Optimization &amp; Direct WhatsApp:</strong> Active A/B creative testing, daily budget monitoring, and direct transparent updates from Ravi.</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                {/* Founder Working Promise Note */}
-                <div className="bg-[#eff4ff] border border-[#dbe1ff] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-                    <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-white border border-[#E5EAF2] flex items-center justify-center text-[#0051d5] font-black text-xl shrink-0 shadow-sm">
-                            🤝
+                {/* Bottom Stats Banner */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-[#001539] text-white">
+                    <div className="text-center p-3 border-r border-white/10 last:border-none">
+                        <div className="font-heading text-2xl sm:text-3xl font-extrabold text-[#dbe1ff]">
+                            1-Second
                         </div>
-                        <div>
-                            <h4 className="font-heading font-bold text-base text-[#001539]">
-                                Our "No-Fluff" Working Promise
-                            </h4>
-                            <p className="font-sans text-xs sm:text-sm text-[#546a92]">
-                                We will never recommend a service or website redesign you don't actually need. If a ₹15,000 fix will solve your bottleneck, that's all we'll propose.
-                            </p>
-                        </div>
+                        <div className="text-xs text-[#b0c6fc] mt-1">Average Page Load Speed</div>
                     </div>
-
-                    <a
-                        href="https://wa.me/918920442422"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#102a56] hover:bg-[#001539] text-white rounded-xl text-xs sm:text-sm font-bold shrink-0 transition-all shadow-sm"
-                    >
-                        <MessageCircle className="w-4 h-4 text-emerald-400" />
-                        <span>Chat Directly on WhatsApp</span>
-                    </a>
+                    <div className="text-center p-3 border-r border-white/10 last:border-none">
+                        <div className="font-heading text-2xl sm:text-3xl font-extrabold text-emerald-400">
+                            48 Hours
+                        </div>
+                        <div className="text-xs text-[#b0c6fc] mt-1">Campaign Strategy to Launch</div>
+                    </div>
+                    <div className="text-center p-3 border-r border-white/10 last:border-none">
+                        <div className="font-heading text-2xl sm:text-3xl font-extrabold text-[#dbe1ff]">
+                            0 Lock-in
+                        </div>
+                        <div className="text-xs text-[#b0c6fc] mt-1">Contracts or Hidden Fees</div>
+                    </div>
+                    <div className="text-center p-3">
+                        <div className="font-heading text-2xl sm:text-3xl font-extrabold text-amber-400">
+                            1-on-1
+                        </div>
+                        <div className="text-xs text-[#b0c6fc] mt-1">Direct Access with Ravi</div>
+                    </div>
                 </div>
             </div>
         </section>

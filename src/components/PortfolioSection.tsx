@@ -5,27 +5,27 @@ import { ArrowRight, TrendingUp, CheckCircle2, MessageCircle } from "lucide-reac
 
 const projects = [
     {
-        title: "Aura Health & Wellness",
-        category: "D2C Brand Scale",
-        tags: ["Landing Page", "Meta Ads"],
-        result: "+310% Online Inquiries in 60 Days",
-        description: "Replaced an outdated, slow WordPress store with a lightning-fast custom landing page and targeted Instagram reels ads.",
+        title: "Anushka Skincare & Aesthetics",
+        category: "Skincare & Clinic Leads",
+        tags: ["Meta Ads", "Landing Page", "WhatsApp Funnel"],
+        result: "2,767 Leads @ ₹23.52 CPL",
+        description: "Delivered 2,767 messaging conversion results at ₹23.52 per lead with budget optimization. Replaced low-converting ad traffic with targeted Instagram reels and a 1-second landing page.",
         image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop",
     },
     {
-        title: "Strata Advisory & Legal",
-        category: "B2B Client Generation",
-        tags: ["Website Design", "Local SEO"],
-        result: "Top 3 Google Ranking for Noida Queries",
-        description: "Engineered an authoritative corporate identity and technical SEO framework that consistently attracts corporate consultation briefs.",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+        title: "Devki Interiors & Modular Homes",
+        category: "Interior Design & Architecture",
+        tags: ["Conversions Campaign", "Audience Scaling", "Meta Ads"],
+        result: "149,000+ Reach • 4.2x ROAS",
+        description: "149k reach results delivered for active custom audience segments in Delhi NCR starting at ₹200/day budget. Generated consistent high-ticket interior consultation bookings directly on WhatsApp.",
+        image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
     },
     {
         title: "Vanguard Properties Group",
         category: "High-Ticket Real Estate",
-        tags: ["Meta Ads Funnel", "WhatsApp CRM"],
+        tags: ["Meta Ads Funnel", "WhatsApp CRM", "Lead Qualification"],
         result: "180+ Verified Site Visits Generated",
-        description: "Built high-intent lead forms with instant WhatsApp qualification, filtering out casual window-shoppers from serious property buyers.",
+        description: "Built high-intent lead qualification forms with instant WhatsApp routing, filtering out casual window-shoppers from serious commercial and residential property buyers.",
         image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
     },
 ];
@@ -37,14 +37,14 @@ export function PortfolioSection() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#dbe1ff] text-[#001539] text-xs uppercase tracking-wider mb-4 font-bold">
-                            RECENT WORK &amp; CASE STUDIES
+                            RECENT WORK &amp; PROVEN RESULTS
                         </div>
                         <h2 className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f131a]">
                             Real Campaigns. Measurable Business Growth.
                         </h2>
                     </div>
                     <p className="font-sans text-base text-[#546a92] max-w-md">
-                        Every project we deliver is engineered around one metric: making sure our client gets a tangible return on their investment.
+                        Every project we deliver is engineered around one metric: making sure our client gets a tangible return on their ad spend and web investment.
                     </p>
                 </div>
 
@@ -82,25 +82,28 @@ export function PortfolioSection() {
                                             </span>
                                         ))}
                                     </div>
-
-                                    <h3 className="font-heading text-xl font-bold text-[#001539] mb-2 group-hover:text-[#0051d5] transition-colors">
+                                    <h3 className="font-heading text-xl font-bold text-[#0f131a] mb-2 group-hover:text-[#0051d5] transition-colors">
                                         {project.title}
                                     </h3>
-
-                                    <p className="font-sans text-xs sm:text-sm text-[#546a92] leading-relaxed mb-6">
+                                    <p className="font-sans text-sm text-[#546a92] leading-relaxed">
                                         {project.description}
                                     </p>
                                 </div>
 
-                                <a
-                                    href="https://wa.me/918920442422"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="pt-4 border-t border-[#E5EAF2] flex items-center justify-between text-xs font-bold text-[#001539] hover:text-[#0051d5] transition-colors"
-                                >
-                                    <span>Discuss a similar project for your brand</span>
-                                    <ArrowRight className="w-4 h-4 text-[#0051d5] group-hover:translate-x-1 transition-transform" />
-                                </a>
+                                <div className="pt-6 mt-6 border-t border-[#E5EAF2] flex items-center justify-between">
+                                    <span className="text-xs font-semibold text-[#001539]">
+                                        {project.category}
+                                    </span>
+                                    <a
+                                        href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20I%20saw%20your%20case%20studies%20and%20want%20to%20achieve%20similar%20growth%20for%20my%20business."
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs font-bold text-[#0051d5] hover:text-[#001539] inline-flex items-center gap-1 transition-colors"
+                                    >
+                                        <span>Discuss Similar Campaign</span>
+                                        <ArrowRight className="w-3.5 h-3.5" />
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
                     ))}

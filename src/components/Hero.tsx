@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, CheckCircle2, Zap, ShieldCheck, HeartHandshake, MapPin } from "lucide-react";
+import { ArrowRight, MessageCircle, CheckCircle2, Zap, ShieldCheck, HeartHandshake, MapPin, TrendingUp, Users, Target } from "lucide-react";
 
 export function Hero() {
     return (
@@ -24,7 +24,7 @@ export function Hero() {
                             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                             <span className="text-[#546a92]">Based in Noida</span>
                             <span className="text-[#c4c6d0]">•</span>
-                            <span className="font-bold text-[#001539]">Partnering with Growing Brands in Delhi NCR</span>
+                            <span className="font-bold text-[#001539]">Direct Lead Generation for Delhi NCR &amp; Beyond</span>
                         </div>
 
                         <h1 className="font-heading text-4xl sm:text-5xl lg:text-[54px] font-black leading-[1.12] tracking-tight text-[#0f131a] mb-6">
@@ -32,26 +32,26 @@ export function Hero() {
                         </h1>
 
                         <p className="font-sans text-base sm:text-lg text-[#546a92] leading-relaxed mb-8 max-w-xl">
-                            No agency fluff. No confusing tech jargon. We build fast, beautiful websites and manage targeted ad campaigns designed to turn clicks into calls, appointments, and real sales.
+                            No agency fluff or confusing tech jargon. We build lightning-fast 1-second landing pages and manage targeted Meta ad campaigns designed to turn clicks into calls, WhatsApp inquiries, and paying clients.
                         </p>
 
                         {/* Direct Human Actions */}
                         <div className="flex flex-wrap gap-4 items-center mb-8">
                             <a
-                                href="https://wa.me/918920442422"
+                                href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20I%20saw%20your%20website%20and%20want%20to%20get%20more%20qualified%20leads%20for%20my%20business."
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#102a56] hover:bg-[#001539] text-white text-base font-bold shadow-md hover:shadow-lg transition-all hover:translate-y-[-1px]"
+                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-base font-bold shadow-md hover:shadow-lg transition-all hover:translate-y-[-1px]"
                             >
-                                <MessageCircle className="w-5 h-5 text-emerald-400" />
-                                <span>Chat with Us on WhatsApp</span>
+                                <MessageCircle className="w-5 h-5 fill-white" />
+                                <span>Message Ravi on WhatsApp</span>
                             </a>
 
                             <a
-                                href="#work"
+                                href="#pricing"
                                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white hover:bg-[#eff4ff] border border-[#E5EAF2] text-[#0f131a] text-base font-bold transition-all shadow-sm"
                             >
-                                See Our Work &rarr;
+                                View Plans (From ₹1,999) &rarr;
                             </a>
                         </div>
 
@@ -59,15 +59,15 @@ export function Hero() {
                         <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-[#E5EAF2] text-xs font-medium text-[#546a92]">
                             <div className="flex items-center gap-1.5">
                                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                <span>Direct access to strategists</span>
+                                <span>Direct 1-on-1 access with Ravi</span>
                             </div>
                             <div className="flex items-center gap-1.5">
                                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                <span>Fast 7–10 day website delivery</span>
+                                <span>Fast 48-hour delivery</span>
                             </div>
                             <div className="flex items-center gap-1.5">
                                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                <span>No long lock-in contracts</span>
+                                <span>No lock-in retainers</span>
                             </div>
                         </div>
                     </motion.div>
@@ -95,11 +95,11 @@ export function Hero() {
                             <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-3.5 border border-[#E5EAF2] shadow-lg flex items-center justify-between">
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-bold text-sm">
-                                        98%
+                                        4.9★
                                     </div>
                                     <div>
-                                        <div className="text-xs font-bold text-[#0f131a]">Client Retention Rate</div>
-                                        <div className="text-[11px] text-[#546a92]">Brands stay because we focus on ROI</div>
+                                        <div className="text-xs font-bold text-[#0f131a]">Verified Client Rating</div>
+                                        <div className="text-[11px] text-[#546a92]">Consistent ROI &amp; weekly WhatsApp updates</div>
                                     </div>
                                 </div>
                                 <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100/70 px-2.5 py-1 rounded-full">
@@ -110,8 +110,44 @@ export function Hero() {
                     </motion.div>
                 </div>
 
+                {/* Real Verified Numbers (From arvianmarketing.shop) */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-5 sm:p-6 rounded-2xl bg-white border border-[#E5EAF2] shadow-sm mb-12">
+                    <div className="border-r border-[#E5EAF2] last:border-none pr-4">
+                        <div className="font-heading text-2xl sm:text-3xl font-black text-[#001539]">
+                            2,767+
+                        </div>
+                        <div className="text-xs font-semibold text-[#546a92] mt-0.5">
+                            Leads Generated for Clients
+                        </div>
+                    </div>
+                    <div className="border-r border-[#E5EAF2] last:border-none pr-4">
+                        <div className="font-heading text-2xl sm:text-3xl font-black text-emerald-600">
+                            ₹23.52
+                        </div>
+                        <div className="text-xs font-semibold text-[#546a92] mt-0.5">
+                            Avg. Cost Per Lead (CPL)
+                        </div>
+                    </div>
+                    <div className="border-r border-[#E5EAF2] last:border-none pr-4">
+                        <div className="font-heading text-2xl sm:text-3xl font-black text-[#0051d5]">
+                            149k+
+                        </div>
+                        <div className="text-xs font-semibold text-[#546a92] mt-0.5">
+                            Meta Audience Reach
+                        </div>
+                    </div>
+                    <div>
+                        <div className="font-heading text-2xl sm:text-3xl font-black text-[#001539]">
+                            4.2x
+                        </div>
+                        <div className="text-xs font-semibold text-[#546a92] mt-0.5">
+                            Client ROAS Recorded
+                        </div>
+                    </div>
+                </div>
+
                 {/* 4 Down-to-Earth Principles */}
-                <div className="pt-10 border-t border-[#E5EAF2]">
+                <div className="pt-6 border-t border-[#E5EAF2]">
                     <div className="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
                         <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#0051d5]">
@@ -159,7 +195,7 @@ export function Hero() {
                                 Performance Over Vanity
                             </h3>
                             <p className="font-sans text-xs text-[#546a92] leading-relaxed">
-                                Likes and impressions don't pay bills. We track cost per lead, verified inquiries, and actual customer sales.
+                                Likes and impressions don&apos;t pay bills. We track cost per lead, verified inquiries, and actual customer sales.
                             </p>
                         </div>
 
@@ -171,7 +207,7 @@ export function Hero() {
                                 Real Person on WhatsApp
                             </h3>
                             <p className="font-sans text-xs text-[#546a92] leading-relaxed">
-                                No ticket queues or automated bots. You get direct access to the strategist working on your campaigns.
+                                No ticket queues or automated bots. You get direct access to Ravi for all campaign updates.
                             </p>
                         </div>
                     </div>

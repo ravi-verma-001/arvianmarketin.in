@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { IntegratedSystemSection } from "@/components/IntegratedSystemSection";
+import { PricingSection } from "@/components/PricingSection";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PortfolioSection } from "@/components/PortfolioSection";
@@ -103,14 +104,17 @@ export default function Home() {
       {/* Featured Service Spotlight: The 3-Step Acquisition Formula */}
       <IntegratedSystemSection />
 
+      {/* Portfolio / Proven Client Results */}
+      <PortfolioSection />
+
+      {/* Clear Pricing Packages */}
+      <PricingSection />
+
       {/* Why Choose Us: Honest Comparison */}
       <WhyChooseUs />
 
       {/* Process Section */}
       <ProcessSection />
-
-      {/* Portfolio / Selected Work */}
-      <PortfolioSection />
 
       {/* Industries We Serve */}
       <IndustriesSection />
@@ -124,7 +128,7 @@ export default function Home() {
       {/* FAQ Accordion */}
       <FaqSection />
 
-      {/* Final Conversion & Contact Form */}
+      {/* Final Conversion & Qualification Funnel Form */}
       <ContactSection />
 
       {/* Footer */}

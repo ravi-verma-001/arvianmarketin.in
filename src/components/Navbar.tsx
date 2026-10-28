@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
     { name: "Services", href: "#services" },
-    { name: "Case Studies", href: "#work" },
-    { name: "Process", href: "#process" },
-    { name: "About", href: "#about" },
+    { name: "Results", href: "#work" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Why Us", href: "#why-us" },
+    { name: "Reviews", href: "#reviews" },
     { name: "FAQ", href: "#faq" },
     { name: "Blog", href: "/blog/" },
 ];
@@ -60,7 +61,7 @@ export function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center gap-8">
+                    <nav className="hidden lg:flex items-center gap-7">
                         {navItems.map((item) => (
                             <a
                                 key={item.name}
@@ -76,18 +77,18 @@ export function Navbar() {
                     <div className="hidden sm:flex items-center gap-3">
                         <a
                             href="#contact"
-                            className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#102a56] hover:bg-[#001539] text-white text-sm font-bold shadow-sm transition-all"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#001539] hover:bg-[#002868] text-white text-sm font-bold shadow-sm transition-all"
                         >
-                            Let's Discuss
+                            Get Growth Plan
                         </a>
                         <a
-                            href="https://wa.me/918920442422"
+                            href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20I%20have%20a%20few%20questions%20before%20getting%20started%20with%20Meta%20Ads."
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-[#e8ecf2] hover:bg-[#dbe1ff] text-[#0f131a] text-sm font-semibold transition-all"
+                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white text-sm font-semibold transition-all shadow-sm"
                         >
-                            <MessageCircle className="w-4 h-4 text-[#0051d5]" />
-                            <span>WhatsApp Chat</span>
+                            <MessageCircle className="w-4 h-4 fill-white" />
+                            <span>WhatsApp</span>
                         </a>
                     </div>
 
@@ -126,19 +127,19 @@ export function Navbar() {
                             <a
                                 href="#contact"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full text-center py-3 rounded-lg bg-[#102a56] text-white text-sm font-bold shadow-sm"
+                                className="w-full text-center py-3 rounded-lg bg-[#001539] text-white text-sm font-bold shadow-sm"
                             >
-                                Let's Discuss Your Project
+                                Get Free Growth Plan
                             </a>
                             <a
-                                href="https://wa.me/918920442422"
+                                href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20I%20have%20a%20few%20questions%20before%20getting%20started%20with%20Meta%20Ads."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#e8ecf2] text-[#0f131a] text-sm font-semibold"
+                                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#25D366] text-white text-sm font-semibold"
                             >
-                                <MessageCircle className="w-4 h-4 text-[#0051d5]" />
-                                WhatsApp Chat
+                                <MessageCircle className="w-4 h-4 fill-white" />
+                                Chat with Ravi on WhatsApp
                             </a>
                         </div>
                     </div>

@@ -48,10 +48,10 @@ export function AboutSection() {
                         </div>
 
                         <a
-                            href="https://wa.me/918920442422"
+                            href="https://wa.me/919711190678?text=Hi%20Ravi%2C%20I%20saw%20your%20story%20and%20want%20to%20discuss%20my%20business%20growth."
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#102a56] hover:bg-[#001539] text-white font-bold text-sm rounded-xl transition-all shadow-md"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#001539] hover:bg-[#002868] text-white font-bold text-sm rounded-xl transition-all shadow-md"
                         >
                             <MessageCircle className="w-4 h-4 text-emerald-400" />
                             <span>Say Hello on WhatsApp &amp; Discuss Your Vision</span>

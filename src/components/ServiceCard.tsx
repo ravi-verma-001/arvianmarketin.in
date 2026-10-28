@@ -97,7 +97,7 @@ export function ServiceCard({
             {/* Bottom Direct Action */}
             <div className="pt-4 border-t border-[#E5EAF2] flex items-center justify-between">
                 <a
-                    href="https://wa.me/918920442422"
+                    href={`https://wa.me/919711190678?text=${encodeURIComponent(`Hi Ravi, I want to discuss ${title} for my business.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-bold text-[#001539] hover:text-[#0051d5] group-hover:translate-x-1 transition-all"
