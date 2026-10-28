@@ -1,0 +1,12 @@
+# Force HTTPS on the apex domain
+http://arvianmarketing.in/* https://arvianmarketing.in/:splat 301!
+
+# Redirect HTTP/HTTPS www to the HTTPS apex domain
+http://www.arvianmarketing.in/* https://arvianmarketing.in/:splat 301!
+https://www.arvianmarketing.in/* https://arvianmarketing.in/:splat 301!
+
+# IMPORTANT:
+# Since you are using a static Next.js export, SPA routing fallback isn't needed here 
+# in the same way it is for Vite/React Router, because Next.js explicitly generates 
+# a matching .html file for every route (e.g., /about.html, /contact.html).
+# Netlify automatically maps these routes internally.

@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-primary: #001539;
+  --color-primary-container: #102a56;
+  --color-on-primary: #ffffff;
+
+  --color-secondary: #0051d5;
+  --color-secondary-container: #316bf3;
+  --color-secondary-fixed: #dbe1ff;
+  --color-on-secondary: #ffffff;
+
+  --color-surface-canvas: #F6F8FC;
+  --color-surface-card: #FFFFFF;
+  --color-surface-container: #eff4ff;
+  --color-border-subtle: #E5EAF2;
+
+  --color-text-primary: #0f131a;
+  --color-text-muted: #546a92;
+  --color-on-surface: #0f131a;
+  --color-on-surface-variant: #546a92;
+  --color-outline: #747780;
+  --color-outline-variant: #c4c6d0;
+
+  --color-background: #F6F8FC;
+  --color-foreground: #0f131a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom Utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility font-heading {
+  font-family: var(--font-heading);
+}
+
+@utility font-sans {
+  font-family: var(--font-sans);
+}
+
+@utility custom-gradient-mesh {
+  background: radial-gradient(120% 120% at 50% 0%, #ffffff 0%, #f6f8fc 60%, #eaf0fa 100%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: #dbe1ff;
+  color: #001539;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
