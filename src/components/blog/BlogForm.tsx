@@ -1,20 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import slugify from "slugify";
 import { BlogPost } from "@/types/blog";
-import { Send, Image as ImageIcon, Loader2 } from "lucide-react";
+import { Send, Image as ImageIcon, Loader2, Sparkles, Tag, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface BlogFormProps {
-    onSubmit: (blog: BlogPost) => void;
+    onSubmit: (blog: Omit<BlogPost, "id" | "createdAt" | "updatedAt">) => void;
 }
 
 export function BlogForm({ onSubmit }: BlogFormProps) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+    const [category, setCategory] = useState("Meta Ads");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
@@ -25,39 +24,34 @@ export function BlogForm({ onSubmit }: BlogFormProps) {
         setSuccess(false);
 
         if (!title.trim() || !description.trim()) {
-            setError("Title and description are required.");
+            setError("Title and content are required.");
             return;
         }
 
         setIsSubmitting(true);
 
         try {
-            // Simulate network delay for better UX
-            await new Promise((resolve) => setTimeout(resolve, 600));
+            await new Promise((resolve) => setTimeout(resolve, 400));
 
-            // Calculate rough read time (assuming 200 words per minute)
             const words = description.trim().split(/\s+/).length;
-            const minutes = Math.ceil(words / 200);
+            const minutes = Math.max(1, Math.ceil(words / 180));
             const readTimeStr = `${minutes} min read`;
 
             const newPost = {
                 title: title.trim(),
                 content: description.trim(),
-                author: "Arvian Marketing", // Default author
-                coverImage: imageUrl.trim() || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-                category: "Technology", // Default category
+                author: "Ravi Verma",
+                coverImage: imageUrl.trim() || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+                category: category || "Meta Ads",
                 readTime: readTimeStr,
             };
 
             onSubmit(newPost as any);
 
-            // Reset form
             setTitle("");
             setDescription("");
             setImageUrl("");
             setSuccess(true);
-
-            // Hide success message after 3 seconds
             setTimeout(() => setSuccess(false), 3000);
         } catch (err) {
             setError("Failed to publish blog post. Please try again.");
@@ -67,99 +61,115 @@ export function BlogForm({ onSubmit }: BlogFormProps) {
     };
 
     return (
-        <div className="bg-[#161618] border border-white/10 p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
-            {/* Ambient glows behind the form */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px] pointer-events-none" />
+        <div className="bg-white border-2 border-[#0051d5]/30 p-6 sm:p-8 rounded-3xl shadow-lg relative overflow-hidden">
+            <div className="flex items-center gap-2 mb-2 text-[#0051d5] text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Admin Editorial Desk</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-[#001539]">
+                Publish a New Article
+            </h2>
 
-            <h2 className="text-2xl font-bold mb-6 text-white relative z-10 text-center md:text-left">Write a New Blog Post</h2>
-
-            <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+            <form onSubmit={handleSubmit} className="space-y-5">
                 {error && (
-                    <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-md text-sm">
+                    <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl text-xs font-semibold">
                         {error}
                     </div>
                 )}
 
                 {success && (
-                    <div className="bg-green-500/10 border border-green-500/20 text-green-400 px-4 py-3 rounded-md text-sm flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        Blog post published successfully!
+                    <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-xl text-xs font-semibold flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        Article published successfully to the blog feed!
                     </div>
                 )}
 
                 <div>
-                    <label htmlFor="title" className="block text-sm font-medium text-gray-400 mb-2">
-                        Blog Title <span className="text-red-500">*</span>
+                    <label htmlFor="title" className="block text-xs font-bold text-[#001539] mb-1.5 uppercase tracking-wider">
+                        Article Headline <span className="text-red-500">*</span>
                     </label>
                     <input
                         id="title"
                         type="text"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                        placeholder="Enter an engaging title..."
-                        className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors"
+                        placeholder="e.g. 5 Ad Hook Templates That Convert in Delhi NCR"
+                        className="w-full bg-[#F6F8FC] border border-[#E5EAF2] rounded-xl px-4 py-3 text-sm text-[#0f131a] placeholder:text-[#9aa0a6] focus:outline-none focus:border-[#0051d5] focus:bg-white transition-all"
                         required
                     />
                 </div>
 
-                <div>
-                    <label htmlFor="description" className="block text-sm font-medium text-gray-400 mb-2">
-                        Blog Content <span className="text-red-500">*</span>
-                    </label>
-                    <textarea
-                        id="description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                        placeholder="Write your blog content here..."
-                        rows={6}
-                        className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors resize-y min-h-[150px]"
-                        required
-                    />
-                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label htmlFor="category" className="block text-xs font-bold text-[#001539] mb-1.5 uppercase tracking-wider">
+                            Category
+                        </label>
+                        <select
+                            id="category"
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                            className="w-full bg-[#F6F8FC] border border-[#E5EAF2] rounded-xl px-4 py-3 text-sm text-[#0f131a] focus:outline-none focus:border-[#0051d5] focus:bg-white transition-all font-medium"
+                        >
+                            <option value="Meta Ads">Meta Ads</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Local SEO">Local SEO</option>
+                            <option value="Lead Funnels">Lead Funnels</option>
+                            <option value="Growth Strategy">Growth Strategy</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label htmlFor="image" className="block text-sm font-medium text-gray-400 mb-2">
-                        Cover Image URL <span className="text-gray-600 text-xs ml-2">(Optional)</span>
-                    </label>
-                    <div className="relative">
-                        <ImageIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                    <div>
+                        <label htmlFor="image" className="block text-xs font-bold text-[#001539] mb-1.5 uppercase tracking-wider">
+                            Cover Image URL
+                        </label>
                         <input
                             id="image"
                             type="url"
                             value={imageUrl}
                             onChange={(e) => setImageUrl(e.target.value)}
-                            placeholder="https://example.com/image.jpg"
-                            className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors"
+                            placeholder="https://images.unsplash.com/..."
+                            className="w-full bg-[#F6F8FC] border border-[#E5EAF2] rounded-xl px-4 py-3 text-sm text-[#0f131a] placeholder:text-[#9aa0a6] focus:outline-none focus:border-[#0051d5] focus:bg-white transition-all"
                         />
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">Leave blank to use the default Arvian Marketing cover image.</p>
                 </div>
 
-                <div className="pt-2 flex justify-end">
-                    <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className={cn(
-                            "inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-bold transition-all w-full md:w-auto",
-                            isSubmitting
-                                ? "bg-gray-800 text-gray-400 cursor-not-allowed"
-                                : "bg-[#2563EB] text-white hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.2)] hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]"
-                        )}
-                    >
-                        {isSubmitting ? (
-                            <>
-                                <Loader2 className="w-5 h-5 animate-spin" />
-                                Publishing...
-                            </>
-                        ) : (
-                            <>
-                                <Send className="w-5 h-5" />
-                                Publish Blog Post
-                            </>
-                        )}
-                    </button>
+                <div>
+                    <label htmlFor="description" className="block text-xs font-bold text-[#001539] mb-1.5 uppercase tracking-wider">
+                        Article Content (Markdown supported) <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                        id="description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        placeholder="Write article paragraphs here. Use ### for subheadings."
+                        rows={7}
+                        className="w-full bg-[#F6F8FC] border border-[#E5EAF2] rounded-xl px-4 py-3 text-sm text-[#0f131a] placeholder:text-[#9aa0a6] focus:outline-none focus:border-[#0051d5] focus:bg-white transition-all resize-y min-h-[160px] leading-relaxed"
+                        required
+                    />
                 </div>
+
+                <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={cn(
+                        "w-full py-3.5 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md",
+                        isSubmitting
+                            ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                            : "bg-[#0051d5] hover:bg-[#003ea8] text-white hover:shadow-lg"
+                    )}
+                >
+                    {isSubmitting ? (
+                        <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Publishing to Blog...</span>
+                        </>
+                    ) : (
+                        <>
+                            <Send className="w-4 h-4" />
+                            <span>Publish Article</span>
+                        </>
+                    )}
+                </button>
             </form>
         </div>
     );
