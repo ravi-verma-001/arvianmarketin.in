@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
@@ -74,7 +75,9 @@ export function ServiceCard({
 
                 {/* Title */}
                 <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#001539] mb-3 group-hover:text-[#0051d5] transition-colors">
-                    {title}
+                    <Link href={`/services/${slug}`} className="hover:underline">
+                        {title}
+                    </Link>
                 </h3>
 
                 {/* Description */}
@@ -95,15 +98,22 @@ export function ServiceCard({
             </div>
 
             {/* Bottom Direct Action */}
-            <div className="pt-4 border-t border-[#E5EAF2] flex items-center justify-between">
+            <div className="pt-4 border-t border-[#E5EAF2] flex items-center justify-between gap-2">
+                <Link
+                    href={`/services/${slug}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0051d5] hover:text-[#001539] transition-colors"
+                >
+                    <span>Learn More</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
                 <a
                     href={`https://wa.me/919711190678?text=${encodeURIComponent(`Hi Ravi, I want to discuss ${title} for my business.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#001539] hover:text-[#0051d5] group-hover:translate-x-1 transition-all"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
                 >
-                    <span>Discuss {title} on WhatsApp</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#0051d5]" />
+                    <MessageCircle className="w-3.5 h-3.5 fill-emerald-600" />
+                    <span>WhatsApp</span>
                 </a>
             </div>
         </motion.div>

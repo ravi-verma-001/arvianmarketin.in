@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, CheckCircle2, MessageCircle } from "lucide-react";
 
@@ -107,6 +108,16 @@ export function PortfolioSection() {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-12 text-center">
+                    <Link
+                        href="/results"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#001539] hover:bg-[#002868] text-white text-sm font-bold shadow-sm transition-all"
+                    >
+                        <span>View In-Depth Case Studies &amp; Campaign Metrics</span>
+                        <ArrowRight className="w-4 h-4" />
+                    </Link>
                 </div>
             </div>
         </section>

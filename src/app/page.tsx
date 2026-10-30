@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -97,6 +98,15 @@ export default function Home() {
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} index={index} className="h-full" />
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-[#eff4ff] border border-[#E5EAF2] text-[#001539] text-sm font-bold shadow-sm transition-all"
+            >
+              <span>Explore All Digital Services &amp; Packages &rarr;</span>
+            </Link>
           </div>
         </div>
       </section>

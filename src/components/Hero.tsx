@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, CheckCircle2, Zap, ShieldCheck, HeartHandshake, MapPin, TrendingUp, Users, Target } from "lucide-react";
 
@@ -47,12 +48,12 @@ export function Hero() {
                                 <span>Message Ravi on WhatsApp</span>
                             </a>
 
-                            <a
-                                href="#pricing"
+                            <Link
+                                href="/pricing"
                                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white hover:bg-[#eff4ff] border border-[#E5EAF2] text-[#0f131a] text-base font-bold transition-all shadow-sm"
                             >
                                 View Plans (From ₹1,999) &rarr;
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Quick Trust Badges */}

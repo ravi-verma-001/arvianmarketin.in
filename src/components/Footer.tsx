@@ -8,16 +8,16 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
                     {/* Brand Info */}
                     <div className="md:col-span-6 flex flex-col items-start">
-                        <div className="flex items-center gap-3 mb-4">
+                        <Link href="/" className="flex items-center gap-3 mb-4 group">
                             <img
                                 src="/arvianlogo.webp"
                                 alt="Arvian Marketing"
-                                className="h-9 w-auto brightness-200"
+                                className="h-9 w-auto brightness-200 group-hover:scale-105 transition-transform"
                             />
                             <span className="font-heading font-black text-lg tracking-tight text-white">
                                 ARVIAN MARKETING
                             </span>
-                        </div>
+                        </Link>
                         <p className="text-sm text-[#b0c6fc] max-w-md leading-relaxed mb-6">
                             Delhi NCR &amp; Noida&apos;s strategic agency for performance Meta Ads, bespoke website design, conversion-focused landing pages, and search optimization.
                         </p>
@@ -68,25 +68,28 @@ export function Footer() {
                         </h4>
                         <ul className="space-y-2.5 text-sm text-[#b0c6fc]">
                             <li>
-                                <a href="#services" className="hover:text-white transition-colors">Services</a>
+                                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
                             </li>
                             <li>
-                                <a href="#work" className="hover:text-white transition-colors">Case Studies</a>
+                                <Link href="/results" className="hover:text-white transition-colors">Case Studies &amp; Results</Link>
                             </li>
                             <li>
-                                <a href="#pricing" className="hover:text-white transition-colors">Pricing Packages</a>
+                                <Link href="/pricing" className="hover:text-white transition-colors">Pricing Packages</Link>
                             </li>
                             <li>
-                                <a href="#why-us" className="hover:text-white transition-colors">Why Choose Us</a>
+                                <Link href="/why-us" className="hover:text-white transition-colors">Why Choose Us</Link>
                             </li>
                             <li>
-                                <a href="#reviews" className="hover:text-white transition-colors">Client Reviews</a>
+                                <Link href="/reviews" className="hover:text-white transition-colors">Client Reviews</Link>
                             </li>
                             <li>
-                                <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+                                <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
                             </li>
                             <li>
-                                <Link href="/blog/" className="hover:text-white transition-colors">Blog &amp; Insights</Link>
+                                <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
+                            </li>
+                            <li>
+                                <Link href="/blog" className="hover:text-white transition-colors">Blog &amp; Insights</Link>
                             </li>
                         </ul>
                     </div>
@@ -110,12 +113,12 @@ export function Footer() {
                             </div>
                             <div>contact@arvianmarketing.com</div>
                             <div className="pt-2">
-                                <a
-                                    href="#contact"
+                                <Link
+                                    href="/contact"
                                     className="inline-block text-xs font-bold text-[#b0c6fc] underline hover:text-white transition-colors"
                                 >
                                     Get My Free Growth Plan &rarr;
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -126,11 +129,11 @@ export function Footer() {
                     <p>
                         © {new Date().getFullYear()} Arvian Marketing • Conversion-Focused Meta Ads &amp; Fast Funnels.
                     </p>
-                    <div className="flex items-center gap-6">
-                        <a href="#services" className="hover:text-white transition-colors">Services</a>
-                        <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
-                        <a href="#work" className="hover:text-white transition-colors">Results</a>
-                        <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                        <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+                        <Link href="/results" className="hover:text-white transition-colors">Results</Link>
+                        <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+                        <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
                     </div>
                 </div>
             </div>
